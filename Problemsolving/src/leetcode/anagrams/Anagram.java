@@ -11,7 +11,7 @@ public class Anagram {
     }
 
     public boolean isAnagram(String s, String t) {
-        if(s.length() != t.length())
+        if (s.length() != t.length())
             return false;
         HashMap<Character, Integer> m1 = countChars(s);
         HashMap<Character, Integer> m2 = countChars(t);
@@ -21,7 +21,7 @@ public class Anagram {
 
     public HashMap<Character, Integer> countChars(String s) {
         HashMap<Character, Integer> countMap = new HashMap<>();
-        for(char c : s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             countMap.merge(c, 1, Integer::sum);
         }
         return countMap;
